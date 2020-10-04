@@ -3,11 +3,19 @@
 // struct templates for mathmatical vetors (2d and 3d)
 #pragma once
 
-#include "gstdint.h"
+#define gstdmathVect
+
+#include "gstdint.h" // in the gstd library / comment out if you dont wish to include this file
+
+#ifndef gstdint
+#define int32 long
+#define NULL 0
+#endif // gstdint
+
 
 namespace gstd
 {
-    template <typename T = int16> // 16 bit integer is defualt / it is expected that you handle out of range exeptions yourself and allocat more memory to the struct if required
+    template <typename T = int32> // 32 bit integer is defualt / it is expected that you handle out of range exeptions yourself and allocat more memory to the struct if required
     struct vect2d
     {
         //static_assert(!std::is_same<T, float>::value, "You can't use floats here");
@@ -189,7 +197,7 @@ namespace gstd
         }
     };
 
-    template <typename T = int16> // 16 bit integer is defualt / it is expected that you handle out of range exeptions yourself and allocat more memory to the struct if required
+    template <typename T = int32> // 32 bit integer is defualt / it is expected that you handle out of range exeptions yourself and allocat more memory to the struct if required
     struct vect3d
     {
     private:
