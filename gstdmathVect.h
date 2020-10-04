@@ -5,7 +5,7 @@
 
 #define gstdmathVect
 
-#include "gstdint.h" // in the gstd library / comment out if you dont wish to include this file
+#include "gstdint.h" // in the gstd library / comment out if you don't wish to include this file
 
 #ifndef gstdint
 #define int32 long
